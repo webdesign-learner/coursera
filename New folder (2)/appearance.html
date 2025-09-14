@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appearance Settings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    
+    <aside class="sidebar">
+      <div class="logo">
+        <div id="logoInitials" class="fas fa-user"></div>
+        <h2>User Profile</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="collection.html"><i class="fas fa-box"></i> Collections</a></li>
+          <li><a href="appearance.html"><i class="fas fa-paint-brush"></i> Appearance</a></li>
+          <li><a href="help.html"><i class="fas fa-question-circle"></i> Help</a></li>
+          <li><a href="settings.html"><i class="fas fa-cog" title="Settings"></i>Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="appearance-page">
+        <h1><i class="fas fa-paint-brush"></i> Appearance Settings</h1>
+        <p>Customize the theme and color of your dashboard interface.</p>
+
+        
+        <section class="theme-toggle">
+          <h2>Dark Mode</h2>
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+          </label>
+        </section>
+
+       
+        <section class="accent-color">
+          <h2>Accent Color</h2>
+          <div class="color-options">
+            <button class="color-btn orange" data-color="#ff6600" title="Orange"></button>
+            <button class="color-btn blue" data-color="#007BFF" title="Blue"></button>
+            <button class="color-btn green" data-color="#28a745" title="Green"></button>
+            <button class="color-btn purple" data-color="#6f42c1" title="Purple"></button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+

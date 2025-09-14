@@ -1,0 +1,418 @@
+:root {
+  --accent-color: #fc8c4c;        /* Default orange */
+  --background-color: #ffffff;   /* Light mode */
+  --text-color: #222222;
+  --card-bg: #f9f9f9;
+  --sidebar-bg: #fc8c4c;
+  --button-text-color: #ffffff;
+}
+
+.dark-mode {
+  --background-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --card-bg: #2c2c2c;
+  --button-text-color: #ffffff;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 40px;
+  background: var(--background-color);
+}
+
+.home-welcome h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.home-welcome p {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-primary, .btn ,
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary, .btn {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+  border: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-primary, .btn:hover {
+  opacity: 0.9;
+  color: black;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 40px;
+  transition: background-color 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.sidebar nav ul li i {
+  margin-right: 10px;
+}
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-header h2 {
+  font-size: 24px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.form-group label {
+  flex-basis: 100%;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.check-icon {
+  color: green;
+  font-size: 18px;
+  margin-left: 10px;
+  align-self: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button.cancel {
+  background: #f2f2f2;
+  color: #333;
+}
+
+button.save {
+  background: var(--accent-color);
+  color: var(--button-text-color);
+}
+
+/* Switch styling (Dark mode toggle) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 26px; width: 26px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Accent Color Buttons */
+.color-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+}
+
+.color-btn.orange { background-color: #fc8c4c; }
+.color-btn.blue { background-color: #3f95f1; }
+.color-btn.green  { background-color: #39f765; }
+.color-btn.purple { background-color: #854fe7; }
+
+img{
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+img:active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    max-height: 50vh;
+    height: auto;
+    transform: translate(-50%, -50%) scale(1.1);
+    border-radius: 12px;
+    z-index: 9999;
+} 
+
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+    position: relative;
+  }
+
+  .logo {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .sidebar nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  .sidebar nav ul li i {
+    margin-right: 0;
+    font-size: 18px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .home-welcome h1 {
+    font-size: 22px;
+  }
+
+  .home-welcome p {
+    font-size: 14px;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    width: 100% !important;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .color-options {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  img:active {
+    width: 90vw;
+    max-height: 60vh;
+  }
+}
+
+
+  

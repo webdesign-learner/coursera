@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <div  id="logoInitials" class="fas fa-user"></div>
+        <h2>User Profile</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"> <i class="fas fa-home"></i> </a>Home</li>
+          <li><a href="collection.html"> <i class="fas fa-box"></i> Collections </a></li>
+          <li><a href="appearance.html"><i class="fas fa-paint-brush"></i> Appearance </a> </li>
+          <li><a href="help.html"><i class="fas fa-question-circle"></i> Help</a> </li>
+          <li><a href="settings.html"><i class="fas fa-cog" title="Settings"></i></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="home-welcome">
+        <h1>Welcome back,<span id="userName"> Mehrab </span>👋</h1>
+        <p>This is your dashboard homepage. From here, you can navigate to edit your profile, check notifications, and manage your account settings.</p>
+
+        <div class="quick-actions">
+          <a href="edit.html"><button class="btn-primary"><i class="fas fa-user-edit"></i> Edit Profile</button></a>
+          <a href="settings.html"><button class="btn-secondary"><i class="fas fa-lock"></i> Security Settings</button></a>
+        </div>
+
+        <div class="dashboard-cards">
+          <div class="card">
+            <h3>Profile Views</h3>
+            <p>1,234 this month</p>
+          </div>
+          <div class="card">
+            <h3>Collections</h3>
+            <a href="collection.html"><p>click to view</p></a> 
+          </div>
+          <div class="card">
+            <h3>Last Login</h3>
+            <p>2 days ago</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

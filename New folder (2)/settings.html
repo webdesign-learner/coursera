@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <div id="logoInitials" class="fas fa-user"></div>
+        <h2>User Profile</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="collection.html"><i class="fas fa-box"></i> Collections</a></li>
+          <li><a href="appearance.html"><i class="fas fa-paint-brush"></i> Appearance</a></li>
+          <li><a href="help.html"><i class="fas fa-question-circle"></i> Help</a></li>
+          <li><a href="settings.html"><i class="fas fa-cog" title="Settings"></i>Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="settings-page">
+        <h1><i class="fas fa-cog"></i> Settings</h1>
+        <p>Manage your account preferences, privacy, and notifications below.</p>
+
+        <section class="settings-section">
+            <br>
+          <h2>Profile Settings</h2>
+          <form>
+            <label for="displayName">Display Name</label>
+            <input type="text" id="displayName" name="displayName" placeholder="Enter your display name" />
+
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" placeholder="Short bio..."></textarea>
+          </form>
+        </section>
+
+        <section class="settings-section">
+            <br>
+          <h2>Security</h2>
+          <form>
+            <label for="currentPassword">Current Password</label>
+            <input type="password" id="currentPassword" name="currentPassword" />
+
+            <label for="newPassword">New Password</label>
+            <input type="password" id="newPassword" name="newPassword" />
+
+            <label for="confirmPassword">Confirm New Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" />
+          </form>
+        </section>
+
+        
+        <section class="settings-section">
+            <br>
+          <h2>Notification Preferences</h2>
+          <form>
+            <label>
+              <input type="checkbox" name="emailNotifications" checked />
+              Receive email notifications
+            </label><br/>
+
+            <label>
+              <input type="checkbox" name="smsAlerts" />
+              Receive SMS alerts
+            </label><br/>
+
+            <label>
+              <input type="checkbox" name="productUpdates" />
+              Get product updates
+            </label>
+          </form>
+        </section>
+        <br>
+        <button class="btn">Save Changes</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
